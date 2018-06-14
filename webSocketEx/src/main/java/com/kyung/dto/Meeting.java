@@ -13,7 +13,7 @@ public class Meeting {
 	int id;
 
 	String name;
-	String explain;
+	String explains;
 	String date;
 
 	public int getId() {
@@ -28,11 +28,11 @@ public class Meeting {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getExplain() {
-		return explain;
+	public String getExplains() {
+		return explains;
 	}
-	public void setExplain(String explain) {
-		this.explain = explain;
+	public void setExplains(String explains) {
+		this.explains = explains;
 	}
 	public String getDate() {
 		return date;
@@ -40,7 +40,5 @@ public class Meeting {
 	public void setDate(String date) {
 		this.date = date;
 	}
-
-
 
 }

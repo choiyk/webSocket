@@ -2,6 +2,8 @@ package com.kyung.controller;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,13 +26,13 @@ public class ListController {
 		return "list";
 	}
 
-	@RequestMapping(value="edit", method=RequestMethod.GET)
+	/*@RequestMapping(value="edit", method=RequestMethod.GET)
     public String edit(@RequestParam("id") int id, Model model) {
 		Meeting meeting = meetingRepository.findOneById(id);
         model.addAttribute("meeting", meeting);
         System.out.println("id: "+meeting.getId());
         return "edit";
-    }
+    }*/
 
 	/*@RequestMapping(value="edit", method=RequestMethod.POST)
     public String edit(Meeting meeting, Model model) {
@@ -66,6 +68,32 @@ public class ListController {
         model.addAttribute("message", "저장했습니다.");
         return "edit";
     }*/
+
+	/*@GetMapping("edit")
+	public String editForm(Model model){
+		model.addAttribute("meeting", new Meeting());
+		return "edit";
+	}
+
+	@PostMapping("edit")
+	public String editSubmit(@ModelAttribute Meeting meeting){
+		return "list";
+	}*/
+
+	@RequestMapping(value="edit", method=RequestMethod.GET)
+    public String edit(@RequestParam("id") int id, Model model) {
+		Meeting meeting = meetingRepository.findOneById(id);
+        model.addAttribute("meeting", meeting);
+        System.out.println("id: "+meeting.getId());
+        return "edit";
+    }
+
+	@Transactional
+	@RequestMapping(value="edit", method=RequestMethod.POST)
+	public String edit(Meeting meeting, Model model){
+		meetingRepository.save(meeting);
+		return "redirect:list";
+	}
 
 
 }

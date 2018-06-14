@@ -16,10 +16,18 @@
 <body>
 <div class="container">
   <h1>모임 정보</h1>
-  <form method="post">
+  <form:form method="post" modelAttribute="meeting">
     <div class="form-group">
       <label>name:</label>
-      <input id="name" name="name" class="form-control" />
+      <form:input id="name" path="name" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>explain:</label>
+      <form:input path="explains" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>date:</label>
+      <form:input path="date" class="form-control" />
     </div>
     <button id="send" type="submit" class="btn btn-primary">
       <i class="glyphicon glyphicon-ok"></i> 저장
@@ -27,7 +35,7 @@
     <a href="list" class="btn btn-default">
       <i class="icon icon-list"></i> 목록으로
     </a>
-  </form>
+  </form:form>
   <c:if test="${ not empty message }">
     <div class="alert alert-info">${ message }</div>
   </c:if>

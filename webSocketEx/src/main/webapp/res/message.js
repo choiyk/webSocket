@@ -43,8 +43,8 @@ function showGreeting(message) {
 
 $(function () {
 	connect();
-	$("form").on('submit', function (e) {
+	/*$("form").on('submit', function (e) {
         e.preventDefault();
-    });
+    });*/
 	$( "#send" ).click(function() { sendName(); });
 });
