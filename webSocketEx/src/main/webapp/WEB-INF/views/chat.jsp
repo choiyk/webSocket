@@ -5,17 +5,17 @@
 <html>
 <head>
     <title>Hello WebSocket</title>
-    <link href="${R}webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="${R}webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="${R}webjars/jquery/jquery.min.js"></script>
     <script src="${R}webjars/sockjs-client/sockjs.min.js"></script>
     <script src="${R}webjars/stomp-websocket/stomp.min.js"></script>
-    <script src="${R}res/app.js"></script>
+    <script src="${R}res/app.js"></script> -->
     
-   <!--  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         rel="stylesheet" media="screen">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
 	
 </head>
 <body>
