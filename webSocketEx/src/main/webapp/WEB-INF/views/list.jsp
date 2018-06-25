@@ -29,7 +29,7 @@
           <tr>
             <td>${ meeting.id }</td>
             <td>${ meeting.name }</td>
-            <td>${ meeting.explains }</td>
+            <td>${ meeting.explain }</td>
             <td>${ meeting.date }</td>
           </tr>
         </c:forEach>
